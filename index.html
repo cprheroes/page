@@ -61,17 +61,31 @@ body {
   margin-bottom: 0;
 }
 
-/* CTA Boxes */
+/* CTA Boxes - UPDATED */
 .cta-box {
   max-width: 520px;
   margin: 40px auto;
   padding: 24px 32px;
-  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  background: #fff; /* CHANGED: White background */
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); /* Green shadow */
   text-align: center;
-  border: 2px solid #ffb347;
+  border: 2px solid #25d366;
+  animation: pulseGlow 2s ease-in-out infinite; /* ADDED: Pulse animation */
 }
+
+/* ADDED: Pulse Glowing Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+    transform: scale(1.02);
+  }
+}
+
 .cta-box p {
   font-size: 1.05rem;
   line-height: 1.6;
@@ -79,12 +93,39 @@ body {
   margin: 0 0 20px 0;
   font-weight: 500;
 }
+
 .cta-box-alt {
-  background: linear-gradient(135deg, #e8f5ff 0%, #cce7ff 100%);
-  border: 2px solid #66b3ff;
-  box-shadow: 0 4px 15px rgba(102, 179, 255, 0.15);
+  background: #fff; /* CHANGED: White background */
+  border: 2px solid #25d366;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  animation: none; /* No pulse for second box */
 }
 
+.cta-box-alt p {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive; /* ADDED: Different font */
+  font-size: 1.1rem;
+}
+
+/* Divider Section - UPDATED */
+.divider-section {
+  max-width: 520px;
+  margin: 50px auto;
+  padding: 20px 32px;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); /* CHANGED: Red gradient */
+  border-radius: 12px;
+  text-align: center;
+  border-left: 5px solid #7f1d1d; /* Dark red border */
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.divider-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ffffff; /* CHANGED: White text */
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow for better readability */
+}
 /* Divider Section */
 .divider-section {
   max-width: 520px;
