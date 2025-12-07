@@ -66,15 +66,14 @@ body {
   max-width: 520px;
   margin: 40px auto;
   padding: 24px 32px;
-  background: #fff; /* CHANGED: White background */
+  background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); /* Green shadow */
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
   text-align: center;
   border: 2px solid #25d366;
-  animation: pulseGlow 2s ease-in-out infinite; /* ADDED: Pulse animation */
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 
-/* ADDED: Pulse Glowing Animation */
 @keyframes pulseGlow {
   0%, 100% {
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -95,54 +94,50 @@ body {
 }
 
 .cta-box-alt {
-  background: #fff; /* CHANGED: White background */
+  background: #fff;
   border: 2px solid #25d366;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-  animation: none; /* No pulse for second box */
+  animation: none;
 }
 
 .cta-box-alt p {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive; /* ADDED: Different font */
+  font-family: 'Georgia', 'Palatino', serif; /* CHANGED: Elegant serif font */
   font-size: 1.1rem;
+  font-style: italic; /* Added italic for emphasis */
 }
 
-/* Divider Section - UPDATED */
+/* Divider Section */
 .divider-section {
   max-width: 520px;
   margin: 50px auto;
   padding: 20px 32px;
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); /* CHANGED: Red gradient */
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   border-radius: 12px;
   text-align: center;
-  border-left: 5px solid #7f1d1d; /* Dark red border */
+  border-left: 5px solid #7f1d1d;
   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .divider-section p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #ffffff; /* CHANGED: White text */
+  color: #ffffff;
   margin: 0;
   font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added shadow for better readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-/* Divider Section */
-.divider-section {
-  max-width: 520px;
-  margin: 50px auto;
-  padding: 20px 32px;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  border-radius: 12px;
-  text-align: center;
-  border-left: 5px solid #0ea5e9;
-  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.1);
+
+/* ADDED: Button with icon */
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.divider-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #0c4a6e;
-  margin: 0;
-  font-weight: 600;
+
+.btn-with-icon::before {
+  content: "💾";
+  font-size: 1.2rem;
 }
 
 .container {
@@ -363,7 +358,7 @@ footer.note {
 <!-- CTA SECTION 1: SAVE CONTACT -->
 <div class="cta-box">
   <p>Jika anda hanya berminat tetapi belum mahu belajar atau ambil tindakan seperti book atau deposit, save dahulu contact CPR Hero. Bila sampai masa, hubungi kami semula atau beritahu kenalan berkenaan kelas kami dan anda akan dapat PROMO istimewa!</p>
-  <button class="btn-cta" onclick="saveContact()">Save Contact CPR Hero</button>
+  <button class="btn-cta btn-with-icon" onclick="saveContact()">Save Contact CPR Hero</button>
 </div>
 
 <!-- DIVIDER SECTION -->
